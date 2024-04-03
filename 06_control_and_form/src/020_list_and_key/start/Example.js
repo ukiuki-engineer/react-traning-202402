@@ -1,4 +1,3 @@
-
 const animals = ["Dog", "Cat", "Rat"];
 
 const Example = () => {
@@ -20,8 +19,13 @@ const Example = () => {
         {/* {animalList}
         {helloAnimals} */}
         {/* {animalList} */}
-
-        {animals.map((animal) => <li>Hello, {animal}</li>)}
+        {
+          /* POINT 子要素にKeyキーを設定 */
+          /* TODO: よく分からん */
+          animals.map((animal) => (
+            <li key={animal}>Hello, {animal}</li>
+          ))
+        }
       </ul>
     </>
   );
